@@ -2,12 +2,14 @@ class Solution {
 public:
     vector<int> dp;
     int len = 0;
+    
     int combinationSum4(vector<int>& nums, int target) {
         dp = vector<int>(target+1, -1);
         dp[0] = 1;
         len = nums.size();
         return combinationSum(nums, target);
     }
+    
     int combinationSum(vector<int>& nums, int target) {
         if(dp[target] != -1) return dp[target];
         
